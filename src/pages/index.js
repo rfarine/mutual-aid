@@ -15,6 +15,7 @@ const Index = ({ data }) => {
     fetch(`/api/date`)
       .then(response => response.json())
       .then(resultData => {
+        console.log('resultData...', resultData);
         setDate(resultData.date)
       })
   }, []);

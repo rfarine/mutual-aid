@@ -13,7 +13,6 @@ type Response struct {
 
 func Handler(w http.ResponseWriter, r *http.Request) {
   currentTime := time.Now().Format(time.RFC850)
-  fmt.Fprintf(w, currentTime)
   date := Response{Date: currentTime}
   json.NewEncoder(w).Encode(date)
 }
