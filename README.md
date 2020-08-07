@@ -1,5 +1,8 @@
 # mutual-aid
-## A general application for mutual aid efforts
+
+<p align="center">
+  <strong>An application for mutual aid efforts</strong>
+</p>
 
 <p align="center">
   <a href="https://circleci.com/gh/rfarine/mutual-aid">
@@ -16,7 +19,7 @@
   </a>
 </p>
 
-Using [Gatsby Universal](https://github.com/fabe/gatsby-universal).
+<p align="center">Using [Gatsby Universal](https://github.com/fabe/gatsby-universal).</p>
 
 ***
 
@@ -75,4 +78,4 @@ module.exports = {
 
 ## Author
 
-* Rae Farine ([@raefarine](https://twitter.com/raefarine)))
+* Rae Farine ([@raefarine](https://twitter.com/raefarine))
