@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-universal",
+  "name": "mutual-aid",
   "license": "MIT",
-  "author": "Fabian Schultz <desk@fabianschultz.com>",
+  "author": "Rae Farine <rfarine1027@gmail.com>",
   "scripts": {
     "develop": "gatsby develop",
     "serve": "gatsby serve",
