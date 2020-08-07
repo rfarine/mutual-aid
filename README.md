@@ -19,8 +19,6 @@
   </a>
 </p>
 
-Using [Gatsby Universal](https://github.com/fabe/gatsby-universal).
-
 ***
 
 ## Configuration
@@ -76,6 +74,7 @@ module.exports = {
     └── favicons.js # Generates favicons and manifest using one png only.
 ```
 
-## Author
+## Credits
 
 * Rae Farine ([@raefarine](https://twitter.com/raefarine))
+* Using [Gatsby Universal](https://github.com/fabe/gatsby-universal).
