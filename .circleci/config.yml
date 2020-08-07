@@ -1,5 +1,5 @@
 jobs:
-  test:
+  lighthouse:
     executor:
       name: node/default
       tag: '12.18.3'
@@ -7,14 +7,13 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - run:
-          command: yarn run test
-          name: Run YARN tests
+      - run: sudo yarn add global @lhci/cli@0.4.4
+      - run: lhci autorun
 
 orbs:
   node: circleci/node@3.0.1
 version: 2.1
 workflows:
-  test_my_app:
+  test:
     jobs:
-      - test
+      - lighthouse
