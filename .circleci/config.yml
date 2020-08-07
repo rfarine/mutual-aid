@@ -1,8 +1,7 @@
 jobs:
   lighthouse:
-    executor:
-      name: node/default
-      tag: '12.18.3'
+    docker:
+      - image: circleci/node:12.18.3-browsers
     steps:
       - checkout
       - node/install-packages:
