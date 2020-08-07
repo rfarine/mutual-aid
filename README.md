@@ -19,7 +19,7 @@
   </a>
 </p>
 
-<p align="center">Using [Gatsby Universal](https://github.com/fabe/gatsby-universal).</p>
+Using [Gatsby Universal](https://github.com/fabe/gatsby-universal).
 
 ***
 
