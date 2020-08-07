@@ -1,31 +1,19 @@
-version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:8.11-browsers
-    working_directory: ~/repo
+  lighthouse:
+    executor:
+      name: node/default
+      tag: '12.18.3'
     steps:
       - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run: sudo yarn global add @lhci/cli@0.4.4
+      - run: lhci autorun
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # Fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # Run tests
-      - run: yarn test
-      - run: yarn build
-      # - deploy:
-      #     command: |
-      #       git config --global user.email $GH_EMAIL
-      #       git config --global user.name $GH_NAME
-      #       yarn deploy
+orbs:
+  node: circleci/node@3.0.1
+version: 2.1
+workflows:
+  test:
+    jobs:
+      - lighthouse
