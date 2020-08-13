@@ -5,12 +5,6 @@
 </p>
 
 <p align="center">
-  <a href="https://circleci.com/gh/rfarine/mutual-aid">
-    <img
-      src="https://circleci.com/gh/rfarine/mutual-aid.svg?style=svg"
-      alt="CircleCI"
-    />
-  </a>
   <a href="https://github.com/prettier/prettier">
     <img
       src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"
