@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   lighthouse:
@@ -22,4 +25,4 @@ jobs:
           accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
           apiToken: ${{ secrets.LIGHTHOUSE_CHECK_API_TOKEN }}
           tag: GitHub Action
-          urls: ${{ secrets.LIGHTHOUSE_CHECK_URL_TOKEN }}
+          urls: ${{ secrets.LIGHTHOUSE_CHECK_URL_TOKEN }}::${{ steps.vercel.outputs.preview-url }}
