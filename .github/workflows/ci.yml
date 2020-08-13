@@ -22,4 +22,4 @@ jobs:
           accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
           apiToken: ${{ secrets.LIGHTHOUSE_CHECK_API_TOKEN }}
           tag: GitHub Action
-          urls: 'mutual-aid.vercel.app'
+          urls: ${{ secrets.LIGHTHOUSE_CHECK_URL_TOKEN }}
