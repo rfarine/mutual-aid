@@ -1,0 +1,7 @@
+{
+  "name": "mutual-aid",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
