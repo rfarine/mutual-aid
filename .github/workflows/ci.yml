@@ -1,4 +1,4 @@
-name: Lighthouse
+name: Deploy
 on:
   push:
     branches:
@@ -8,17 +8,26 @@ on:
       - master
 
 jobs:
-  lighthouse:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: amondnet/vercel-action@v19
+
+      - name: Install Node Modules
+        run: yarn
+
+      - name: Run Jest Tests
+        run: yarn test
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v19
         id: vercel
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           vercel-args: '--prod' #Optional
           vercel-org-id: ${{ secrets.ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
+
       - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
