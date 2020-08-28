@@ -32,6 +32,7 @@
     "build": "react-scripts build && cap copy",
     "sync": "cap sync",
     "test": "react-scripts test",
+    "test:ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
