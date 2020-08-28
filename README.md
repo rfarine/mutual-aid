@@ -16,4 +16,4 @@
 ## Credits
 
 * Rae Farine ([@raefarine](https://twitter.com/raefarine))
-* (Ionic React)[https://ionicframework.com/react]
+* [Ionic React](https://ionicframework.com/react)
