@@ -1,0 +1,20 @@
+type PaymentMethod @collection(name: "payment_methods") {
+  id: ID!
+  type: PaymentType!
+  handle: String!
+  person: Person!
+}
+
+type Person @collection(name: "people") {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  org: String
+  paymentMethods: [PaymentMethod!]! @relation
+}
+
+enum PaymentType {
+  venmo
+  cashapp
+  paypal
+}
