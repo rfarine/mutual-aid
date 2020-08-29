@@ -4,8 +4,7 @@ import (
   "fmt"
   "net/http"
   "os"
-  "github.com/gin-gonic/gin"
-  f "gopkg.in/fauna/faunadb-go.v2/faunadb"
+  f "github.com/fauna/faunadb-go/faunadb"
 )
 
 type Person struct {
