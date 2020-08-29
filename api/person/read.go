@@ -4,7 +4,7 @@ import (
   "fmt"
   "net/http"
   "os"
-  f "github.com/fauna/faunadb-go/faunadb"
+  f "github.com/fauna/faunadb-go/v3/faunadb"
 )
 
 type Person struct {
