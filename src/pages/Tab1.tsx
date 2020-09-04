@@ -5,11 +5,11 @@ import './Tab1.css';
 
 const Tab1: React.FC = () => {
 
-  const [person, setPerson] = useState({});
+  const [person, setPerson] = useState({ firstName: '' });
 
   useEffect(() => {
     fetch(
-      `/person/read`,
+      `/people/read`,
       {
         method: "GET",
       }
@@ -29,7 +29,7 @@ const Tab1: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1</IonTitle>
-            <div>Testing this out... {person}</div>
+            <div>Testing this out... The person is...{person.firstName}</div>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Tab 1 page" />
