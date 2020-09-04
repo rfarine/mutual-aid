@@ -18,7 +18,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
   apiKey := os.Getenv("FAUNADB_SECRET")
   client := f.NewFaunaClient(apiKey)
 
-  res, err := client.Query(f.Get(f.RefClass(f.Collection("person"), "1")))
+  // TODO: Do not hard code the ID lol
+  // TODO: Rename this file to take advantage of dynamic routing in vercel?
+  res, err := client.Query(f.Get(f.RefClass(f.Collection("people"), "1")))
 
   if err != nil {
     panic(err)
