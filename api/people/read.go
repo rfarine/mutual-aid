@@ -20,7 +20,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
   // TODO: Do not hard code the ID lol
   // TODO: Rename this file to take advantage of dynamic routing in vercel?
-  res, err := client.Query(f.Match(f.Index("people_by_id"), "1"))
+  res, err := client.Query(f.Get(f.MatchTerm(f.Index("people_by_id"), "1")))
 
   if err != nil {
     panic(err)
