@@ -32,5 +32,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
     panic(err)
   }
 
-  fmt.Println(person)
+  f.MarshalJSON(res.At(f.ObjKey("data").Get(&person)))
 }
