@@ -1,5 +1,7 @@
 # mutual-aid
 
+![Deploy](https://github.com/rfarine/mutual-aid/workflows/Deploy/badge.svg)
+
 <p align="center">
   <strong>An application for mutual aid efforts</strong>
 </p>
