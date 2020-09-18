@@ -32,5 +32,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
     panic(err)
   }
 
-  f.MarshalJSON(person)
+  fmt.Println(person)
 }
